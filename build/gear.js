@@ -2839,7 +2839,7 @@ var writeFile = {
             name = name.replace('{checksum}', checksum.digest('hex'));
         }
 
-        path.exists(dirname, function(exists) {
+        fs.exists(dirname, function(exists) {
             if (!exists) {
                 mkdirp(dirname, '0755', function(err) {
                     if (err) {

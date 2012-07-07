@@ -3177,7 +3177,7 @@ Registry.prototype = {
             files = fs.readdirSync(dirname),
             self = this;
 
-        if (!path.existsSync(dirname)) {
+        if (!fs.existsSync(dirname)) {
             throw new Error('Directory ' + dirname + ' doesn\'t exist');
         }
 
@@ -3191,7 +3191,7 @@ Registry.prototype = {
             return;
         }
 
-        if (!path.existsSync(filename)) {
+        if (!fs.existsSync(filename)) {
             throw new Error('File ' + filename + ' doesn\'t exist');
         }
 
